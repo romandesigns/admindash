@@ -3,7 +3,7 @@ import { Sidebar } from "@/app/ui/dashboard/sidebar";
 
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="flex">
+    <div className="flex h-full">
       <div className="flex-[1] bg-neutral-900 p-[2rem]">
         <Sidebar />
       </div>

@@ -1,11 +1,13 @@
-import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
-import "@radix-ui/themes/styles.css";
 import { Theme } from "@radix-ui/themes";
+import "@radix-ui/themes/styles.css";
+import { Poppins } from "next/font/google";
 import "./ui/globals.css";
+import type { Metadata } from "next";
 
 const poppins = Poppins({
   subsets: ["latin"],
+  display: "swap",
+  variable: "--font-poppins",
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
@@ -20,9 +22,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={poppins.className}>
-        <Theme accentColor="cyan" grayColor="gray" appearance="dark">
+    <html lang="en" suppressHydrationWarning className={`h-full`}>
+      <body className={`${poppins.variable} h-full`}>
+        <Theme
+          accentColor="cyan"
+          grayColor="gray"
+          appearance="dark"
+          className="h-full">
           {children}
         </Theme>
       </body>

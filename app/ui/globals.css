@@ -1,9 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "./theme-config.css";
 
 @layer components {
   body {
-    @apply antialiased font-poppins;
+    @apply antialiased;
   }
 }
