@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "@radix-ui/themes/styles.css";
 import { Theme } from "@radix-ui/themes";
-import "./globals.css";
+import "./ui/globals.css";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -20,9 +20,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={poppins.className}>
-        <Theme accentColor="cyan" grayColor="gray">
+        <Theme accentColor="cyan" grayColor="gray" appearance="dark">
           {children}
         </Theme>
       </body>

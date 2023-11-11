@@ -3,15 +3,13 @@ import { Sidebar } from "@/app/ui/dashboard/sidebar";
 
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div>
-      <div>
-        <div>
-          <Sidebar />
-        </div>
-        <div>
-          <Navbar />
-          {children}
-        </div>
+    <div className="flex">
+      <div className="flex-[1] bg-neutral-900 p-[2rem]">
+        <Sidebar />
+      </div>
+      <div className="flex-[4] p-[2rem]">
+        <Navbar />
+        {children}
       </div>
     </div>
   );
