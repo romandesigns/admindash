@@ -6,7 +6,7 @@ import { MdLogout } from "react-icons/md";
 
 export const Sidebar = () => {
   return (
-    <aside className="h-full">
+    <aside className="h-full fixed">
       {/* User details */}
       <div className="flex items-center gap-2 mb-10">
         <Avatar

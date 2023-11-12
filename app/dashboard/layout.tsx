@@ -8,7 +8,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
       <div className="bg-neutral-900 p-[2rem] flex-[1] !sticky top-0">
         <Sidebar />
       </div>
-      <div className="p-[2rem] flex-[4]">
+      <div className="p-[2rem] flex-[8]">
         <Navbar />
         {children}
       </div>
