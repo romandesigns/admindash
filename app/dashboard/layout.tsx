@@ -1,6 +1,6 @@
 import { Navbar } from "@/app/ui/dashboard/navbar";
 import { Sidebar } from "@/app/ui/dashboard/sidebar";
-import { Grid } from "@radix-ui/themes";
+import Footer from "../ui/dashboard/footer/footer";
 
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -11,6 +11,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
       <div className="p-[2rem] flex-[8]">
         <Navbar />
         {children}
+        <Footer />
       </div>
     </div>
   );
